@@ -1,6 +1,6 @@
 package pl.ml.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -10,42 +10,115 @@ import lombok.NoArgsConstructor;
  */
 
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
-//@JsonIgnoreProperties(ignoreUnknown = true)
+@NoArgsConstructor
 public class Rates {
-    private double BGN;
-    private double NZD;
-    private double ILS;
-    private double RUB;
-    private double CAD;
-    private double USD;
-    private double PHP;
-    private double CHF;
-    private double AUD;
-    private double JPY;
-    private double TRY;
-    private double KHD;
-    private double MYR;
-    private double HRK;
-    private double CZK;
-    private double IDR;
-    private double DKK;
-    private double NOK;
-    private double HUF;
-    private double GBP;
-    private double MXN;
-    private double THB;
-    private double ISK;
-    private double ZAR;
-    private double BRL;
-    private double SGD;
-    private double PLN;
-    private double INR;
-    private double KRW;
-    private double RON;
-    private double CNY;
-    private double SEK;
-    private double EUR;
 
+    @JsonProperty("BGN")
+    private Double BGN;
+
+    @JsonProperty("NZD")
+    private Double NZD;
+
+    @JsonProperty("ILS")
+    private Double ILS;
+
+    @JsonProperty("RUB")
+    private Double RUB;
+
+    @JsonProperty("CAD")
+    private Double CAD;
+
+    @JsonProperty("USD")
+    private Double USD;
+
+    @JsonProperty("PHP")
+    private Double PHP;
+
+    @JsonProperty("CHF")
+    private Double CHF;
+
+    @JsonProperty("AUD")
+    private Double AUD;
+
+    @JsonProperty("JPY")
+    private Double JPY;
+
+    @JsonProperty("TRY")
+    private Double TRY;
+
+    @JsonProperty("HKD")
+    private Double HKD;
+
+    @JsonProperty("MYR")
+    private Double MYR;
+
+    @JsonProperty("HRK")
+    private Double HRK;
+
+    @JsonProperty("CZK")
+    private Double CZK;
+
+    @JsonProperty("IDR")
+    private Double IDR;
+
+    @JsonProperty("DKK")
+    private Double DKK;
+
+    @JsonProperty("NOK")
+    private Double NOK;
+
+    @JsonProperty("HUF")
+    private Double HUF;
+
+    @JsonProperty("GBP")
+    private Double GBP;
+
+    @JsonProperty("MXN")
+    private Double MXN;
+
+    @JsonProperty("THB")
+    private Double THB;
+
+    @JsonProperty("ISK")
+    private Double ISK;
+
+    @JsonProperty("ZAR")
+    private Double ZAR;
+
+    @JsonProperty("BRL")
+    private Double BRL;
+
+    @JsonProperty("SGD")
+    private Double SGD;
+
+    @JsonProperty("PLN")
+    private Double PLN;
+
+    @JsonProperty("INR")
+    private Double INR;
+
+    @JsonProperty("KRW")
+    private Double KRW;
+
+    @JsonProperty("RON")
+    private Double RON;
+
+    @JsonProperty("CNY")
+    private Double CNY;
+
+    @JsonProperty("SEK")
+    private Double SEK;
+
+    @JsonProperty("EUR")
+    private Double EUR;
+
+    @JsonProperty("LVL")
+    private Double LVL;
+
+    @JsonProperty("LTL")
+    private Double LTL;
+
+    @JsonProperty("EEK")
+    private Double EEK;
 }

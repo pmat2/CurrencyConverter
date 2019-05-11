@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Rates {
+class Rates {
 
     @JsonProperty("BGN")
     private Double BGN;

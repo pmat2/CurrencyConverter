@@ -1,36 +1,31 @@
 package pl.ml;
 
-import pl.ml.service.CurrencyService;
-
-import java.io.IOException;
-import java.text.DecimalFormat;
-import java.util.Scanner;
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.image.Image;
+import javafx.stage.Stage;
 
 /**
  * @author pmatusiak
  */
-public class Main {
+public class Main extends Application {
 
+    public static void main(String[] args) {
+        launch(args);
+    }
 
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/root.fxml"));
+        loader.load();
 
-    private static DecimalFormat df = new DecimalFormat("0.00");
-
-    public static void main(String[] args) throws IOException {
-        Scanner sc = new Scanner(System.in);
-
-        System.out.println("Podaj walutę bazową");
-        String baseCurrency = sc.nextLine();
-
-        System.out.println("Podaj walutę kwotowaną");
-        String quoteCurrency = sc.nextLine();
-
-        System.out.println("Podaj ilość");
-        double amount = sc.nextDouble();
-
-        CurrencyService cs = new CurrencyService();
-
-        System.out.println(amount + " " + baseCurrency + " to " + df.format(cs.getExchange(baseCurrency, quoteCurrency, amount)) + " " + quoteCurrency);
-
-        sc.close();
+        Parent root = loader.getRoot();
+        primaryStage.getIcons().add(new Image("/currencyConverterIcon.png"));
+        primaryStage.setTitle("Currency converter");
+        primaryStage.setScene(new Scene(root));
+        primaryStage.show();
     }
 }
